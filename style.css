@@ -1,0 +1,345 @@
+/*
+light creme color - #f4edec
+pink - #dd408c
+green - #2fb631
+brown - #914b4b
+lavender pink - #FFC4EB
+pale purple - #FFE4FA
+misty rose - #F1DEDC
+pearl - #E1DABD
+olivine - #ABC798
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 10px;
+    background: #E1DABD;
+}
+
+.logo {
+    width: 10%;
+    margin-right: auto;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 30px;
+    font-weight: 600;
+    color: #dd408c;
+    font-size: 20px;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    color: #dd408c;
+}
+
+.nav_links li a:hover {
+    color: #dd408c;
+    border-bottom: 2px solid #dd408c;
+}
+
+.main-content {
+    margin: 5% 3%;
+}
+
+.intro {
+    background: #f4edec;
+    padding: 5% 3%;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.intro .brand-name {
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+}
+
+.intro .slogan {
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.intro .description {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.order-btn {
+    padding: 1% 2%;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #dd408c;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.order-btn:hover {
+    background: #dd408ce8;
+}
+
+.order-now{
+    padding: 1% 2%;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: #dd408c;
+    color: white;
+}
+
+.order-now:hover {
+    background: #dd408ce8;
+}
+
+footer {
+    text-align: center;
+    background: #E1DABD;
+    width: 100%;
+    color: #914b4b;
+    font-weight: 500;
+    padding: 2px 0;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+}
+
+#social li {
+    color: #914b4b;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+#social li a {
+    color: #914b4b;
+    font-size: 25px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.order {
+    border: 1px solid #dd408c;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 80px auto;
+    text-align: center;
+    background: #f6f3f3;
+    padding: 30px;
+    border: 1px solid #dd408c;
+    border-radius: 5px;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;    
+             
+    padding: 30px; 
+}
+
+#slider-image {
+    max-width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#slider-image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.slider-btn {
+    padding: 10px 20px;
+    background-color: #E1DABD;
+    color: #dd408c;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.slider-btn i{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.slider-btn:hover {
+    background-color: #efd0cd;
+}
+
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+#beverage-name {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#beverage-name a{
+    text-decoration: none;
+}
+
+#beverage-name:hover {
+    font-weight: bold;
+}
+
+table{
+    border: 1px solid #dd408c;
+    padding: 30px;
+    border-radius: 5px;
+    background: #f6f3f3;
+    display: flex;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+
+    overflow-x: auto;
+    padding: 0 0 30px 0;
+}
+
+.left-table, .right-table {
+    border-collapse: collapse;
+    width: 45%;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+
+    padding: 10px;         
+}
+
+.left-table th, .right-table th {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 2px solid black;
+
+    position: sticky;
+    top: 0;
+    background-color: #f2f2f2;
+    z-index: 1;
+}
+
+.left-table td, .right-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.left-table tr:last-child td, .right-table tr:last-child td {
+    border-bottom: none;
+}
+
+#order{
+    background: #f6f3f3;
+}
+
+#order select, input{
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    text-indent: 5px;
+    font-size: 15px;
+    margin-top: 10px;
+    border: none;
+    background:#E1DABD;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .modal-content button {
+    padding: 10px 20px;
+    background-color: #dd408c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+    .table-container {
+      flex-direction: column;
+    }
+  
+    .left-table, .right-table {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+@media (max-width: 768px) {
+    .slider {
+      max-width: 90%;
+      margin: 40px auto;
+    }
+    
+    #slider-image {
+      height: auto;
+      max-height: 250px;
+      transition: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .slider-btn {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+    

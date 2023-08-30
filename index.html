@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SipCity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <img class="logo" src="./images/logo.png" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#main-content">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#mytable">Prices</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#social">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content" id="main-content">
+
+        <!-- About -->
+        <div class="intro" id="about">
+            <p class="brand-name">SIPCITY</p>
+            <p class="slogan">Crafted Drinks for Every Craving</p>
+            <hr>
+            <p class="description">Welcome to SipCity, where flavorful dreams come true in every sip. Explore our
+                enticing range of
+                handcrafted cocktails, refreshing lemonades, aromatic coffees, and indulgent milkshakes. Immerse
+                yourself in a world of taste, where each drink is a masterpiece waiting to delight your senses. Join us
+                on a journey through the art of beverages, where every visit to SipCity is a sip of pure pleasure.</p>
+            <a class="order-btn" href="#order">Order Now</a>
+        </div>
+
+        <!-- Image carousel -->
+        <div class="slider" id="menu">
+            <h3>Menu</h3><br /><br />
+            <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fa fas fa-angle-left"></i></button>
+            <img id="slider-image" src="./images/coffee.jpg" alt="Image Slider">
+            <button class="slider-btn next" onclick="changeSlide(1)"><i class="fa fas fa-angle-right"></i></button>
+            <div id="beverage-name"><a id="beverage-a">Coffee</a>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div class="order" id="order">
+            <h3>Order</h3>
+            <label for="beverages">Choose a beverage :</label>
+            <select name="beverages" id="beverages">
+                <option value="coffee">Coffee</option>
+                <option value="blueberry-mint-cucumber-gin-spritzer">Blueberry, Mint & Cucumber Gin spritzer</option>
+                <option value="blue-lagoon-mocktail">Blue Lagoon Mocktail</option>
+                <option value="candy-cane-freakshake">Candy Cane Freakshake</option>
+                <option value="brownie-milkshake">Brownie Milkshake</option>
+                <option value="watermelon-lemonade">Watermelon Lemonade</option>
+                <option value="cookies-and-milk-milkshake">Cookies & Milk Milkshake</option>
+                <option value="dreamy-caramel-milkshake">Dreamy Caramel Milkshake</option>
+                <option value="italian-lemonade">Italian Lemonade</option>
+                <option value="mango-dragonfuit-lemonade">Mango Dragonfruit Lemonade</option>
+                <option value="raspberry-lemonade">Raspberry Lemonade</option>
+                <option value="lavender-lemonade">Lavender Lemonade</option>
+                <option value="strawberry-boba">Strawberry Boba</option>
+                <option value="korean-green-plum-iced-tea">Korean Green Plum Iced Tea</option>
+                <option value="mocha-frapuccino">Mocha Frapuccino</option>
+                <option value="strawberry-cucumber-mocktail">Strawberry Cucumber Mocktail</option>
+                <option value="strawberry-cheescake-milkshake">Strawberry Cheesecake Milkshake</option>
+            </select>
+            <br /><br />
+            <label for="size">Choose the size :</label>
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="small">Medium</option>
+                <option value="small">Large</option>
+            </select>
+            <br /><br />
+            <label for="qty">Quantity</label>
+            <input type="number" id="qty"><br /><br />
+            <button class="order-now" id="show-alert">Order</button>
+
+
+            <!-- Dialog Box -->
+            <div class="modal">
+                <div class="modal-content">
+                    <p id="fail">Fill the order form</p>
+                    <p id="success">You've successfully placed an order</p>
+                    <button id="close-modal">OK</button>
+                </div>
+            </div>
+
+        </div>
+        <br><br>
+
+        <!-- Price Table -->
+        <div class="price-table">
+            <h3>Prices</h3>
+            <div class="table-container" id="mytable">
+                <table border="0" class="left-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr id="coffee">
+                        <td>Coffee</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="blueberry-mint-cucumber-gin-spritzer">
+                        <td>Blueberry, Mint & Cucumber Gin spritzer</td>
+                        <td>Small</td>
+                        <td>Rs. 250</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 400</td>
+                    </tr>
+                    <tr id="blue-lagoon-mocktail">
+                        <td>Blue Lagoon Mocktail</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="candy-cane-freakshake">
+                        <td>Candy Cane Freakshake</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="brownie-milkshake">
+                        <td>Brownie Milkshake</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="watermelon-lemonade">
+                        <td>Watermelon Lemonade</td>
+                        <td>Small</td>
+                        <td>Rs. 120</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="cookies-and-milk-milkshake">
+                        <td>Cookies & Milk Milkshake</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="dreamy-caramel-milkshake">
+                        <td>Dreamy Caramel Milkshake</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="italian-lemonade">
+                        <td>Italian Lemonade</td>
+                        <td>Small</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 400</td>
+                    </tr>
+                </table>
+                <table border="0" class="right-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr id="mango-dragonfuit-lemonade">
+                        <td>Mango Dragonfruit Lemonade</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="raspberry-lemonade">
+                        <td>Raspberry Lemonade</td>
+                        <td>Small</td>
+                        <td>Rs. 280</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 310</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="lavender-lemonade">
+                        <td>Lavender Lemonade</td>
+                        <td>Small</td>
+                        <td>Rs. 260</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 320</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="strawberry-boba">
+                        <td>Strawberry Boba</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="korean-green-plum-iced-tea">
+                        <td>Korean Green Plum Iced Tea</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="mocha-frapuccino">
+                        <td>Mocha Frapuccino</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr id="strawberry-cucumber-mocktail">
+                        <td>Strawberry Cucumber Mocktail</td>
+                        <td>Small</td>
+                        <td>Rs. 200</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 400</td>
+                    </tr>
+                    <tr id="strawberry-cheescake-milkshake">
+                        <td>Strawberry Cheesecake Milkshake</td>
+                        <td>Small</td>
+                        <td>Rs. 150</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Medium</td>
+                        <td>Rs. 300</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Large</td>
+                        <td>Rs. 350</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; sipcity 2023
+        <ul id="social">
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
+            <li><a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+            <li><a href="https://www.snapchat.com" target="_blank"><i class="fa fa-snapchat-square"></i></a></li>
+            <li><a href="https://www.pinterest.com" target="_blank"><i class="fa fa-pinterest-square"></i></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
